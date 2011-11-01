@@ -1,0 +1,94 @@
+=======
+Bedrock
+=======
+
+Author: Adam Chlipala <http://adam.chlipala.net/>
+        With contributions by Gregory Malecha
+          <http://www.people.fas.harvard.edu/~gmalecha/>
+
+Bedrock is a Coq library for programming and verifying low-level programs.
+It generalizes the XCAP framework
+<http://flint.cs.yale.edu/flint/publications/xcap.html>, adding
+structured programming support and very effective proof automation,
+based on separation logic.
+
+This release has only been tested with Coq 8.3pl2.  You can build it
+by running "make" here.  Be forewarned that the automated proofs can
+take a lot of time (a few hours, on my workstations).
+
+The best way to get a sense of things is to look at the examples in
+the orders suggested below.  The examples come in two groupings, both
+dealing with idealized low-level languages: an assembly language and a
+compiler intermediate language.
+
+===========================================
+The assembly language (directory ideal/asm)
+===========================================
+
+Ideal: Language syntax and semantics, plus tactics
+
+Baby: Two very simple introductory examples
+
+LinkedListRev: A solution to the example problem from McCreight's
+paper on "Practical Tactics for Separation Logic"
+<http://web.cecs.pdx.edu/~mccreigh/ptsl/>
+
+SinglyLinkedList: An implementation of finite sets with unsorted
+linked lists (based on one of the Jahob <http://lara.epfl.ch/w/jahob_system>
+examples)
+
+AssociationList: An implementation of finite maps with unsorted linked
+lists (based on another Jahob example)
+
+Malloc: A basic memory management library used by most of the examples
+
+BinarySearchTree: Another finite set example from Jahob
+
+Hashtable: Another finite map example from Jahob
+
+ArrayList: Another Jahob example, involving automatically-growing
+arrays
+
+Memoize: An abstract function memoization module, backed behind the
+scenes by Hashtable
+
+AppendCPS: The main example from the original XCAP paper: destructive
+linked list append, in continuation-passing style with explicit
+closures
+
+ThreadLib: A small cooperative threading library
+
+==============================================
+The intermediate language (directory ideal/ir)
+==============================================
+
+Mir: Language syntax and semantics, plus tactics
+
+Baby: Two very simple introductory examples
+
+Malloc: A basic memory management library used by most of the examples
+
+Typed: Defines a semantic notion of "type" and related verification
+machinery
+
+Pure: Some basic types that don't constrain memory
+
+Impure: Some basic types that do constrain memory
+
+SlList: The type family of singly-linked lists
+
+BabyTyped: Basic typed examples with linked lists
+
+HoTyped: Some typed higher-order functions
+
+Lambda, LambdaTest: Statement extension: Local function definitions
+
+IfStar, IfStarTest: Statement extension: Complex conditionals
+
+SqlTree: Binary search trees suitable for use in implementing
+SQL-style relations
+
+Wrap: Deriving one statement extension from another by providing an
+alternate verification condition
+
+Sql, SqlTest: Simple variants of SQL INSERT and SELECT

@@ -1,0 +1,97 @@
+
+\documentclass{llncs}%
+\usepackage{makeidx}  % allows for indexgeneration
+
+
+\usepackage{stmaryrd}
+\usepackage{pstricks}
+\usepackage{pspicture}
+\usepackage{amssymb}
+\usepackage{graphicx}
+%\usepackage{mathpartir}
+\usepackage{ifthen}
+%\usepackage{irule}
+%\usepackage[bookmarks=true,pdfpagelabels=true]{hyperref}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{listings}
+
+%% \hypersetup{
+%%     bookmarksnumbered=true,         
+%%     plainpages=false,
+%% %    linktocpage=true,
+%%     final=true,
+%%     unicode=false,          % non-Latin characters in Acrobats bookmarks
+%%     pdftitle={\papertitle},    % title
+%%     pdfdisplaydoctitle=true,
+%%     breaklinks=true,
+%%     colorlinks=false,       % false: boxed links; true: colored links
+%%     pdfborder={0 0 0},      % box of size 0
+%%     linkcolor=red,          % color of internal links
+%%     citecolor=green,        % color of links to bibliography
+%%     filecolor=magenta,      % color of file links
+%%     urlcolor=cyan           % color of external links
+%% }
+
+\newcommand{\keywordstyle}{\sffamily\textbf}
+\newcommand{\keyword}[1]{{\mbox{\keywordstyle{#1}}}}
+\newcommand{\basiccode}[1]{{\mbox{\sffamily{#1}}}}
+\newcommand{\rulename}[1]{\textsc{#1}}
+\lstdefinelanguage{coq}%
+       {keywords={Definition,Parameter,Axiom,Module,Variable,let,in,match,with,return,as,in,forall,exists,Type,Set,Inductive,True,False,Prop,End},
+        alsoletter={'},
+        deletestring=[b]{'},
+        comment=[n]{(*}{*)},
+        literate={->}{{$\rightarrow$}}1
+                 {\\/}{{$\vee$}}1
+                 {/\\}{{$\wedge$}}1
+                 {<>}{{$\neq$}}1
+                 {~}{{$\neg$}}1
+                 {exists}{{$\exists$}}1
+                 {forall}{{$\forall$}}1
+       }
+
+\lstset{basicstyle=\sffamily,
+        numbers=left,
+        keywordstyle=\keywordstyle,
+        commentstyle=\rm\textit,
+        numberstyle=\tiny,
+        numbersep=3pt,
+        stepnumber=1,
+        frame=lines,
+        mathescape=true,
+        xleftmargin=10pt,
+        xrightmargin=10pt,
+        columns=flexible}
+
+\newcommand{\add}[1]{\textcolor{blue}{#1}}
+\newcommand{\del}[1]{\textcolor{red}{#1}}
+\newcommand{\coq}[1]{{\tt #1}}
+
+\begin{document}
+
+%\pagestyle{headings}  % switches on printing of running heads
+
+\title{Verified Memory Managers}
+
+\author{Gregory Malecha \and Adam Chlipala}
+\institute{Harvard University \\ \email{gmalecha@cs.harvard.edu}  }
+
+\maketitle
+
+\begin{abstract}
+
+\end{abstract}
+
+\section{Introduction}
+
+
+
+
+\bibliographystyle{plain}
+
+\bibliography{bib}
+
+\end{document}
+
+
